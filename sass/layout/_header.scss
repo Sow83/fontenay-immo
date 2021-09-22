@@ -1,0 +1,47 @@
+ /**
+ * 1. Dans le partiel typographiy tous les width des images sont à 100% donc
+ *    responsives
+ */
+.header{
+    @include layout-container( $padding-top: 0, $padding-bottom: 0);   
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        @include space (padding, top, $small);
+    }
+    &__logo{
+        width: 200px; /* [1] */
+        @include space (padding, right, 30px);
+    }
+    &__button-hamburger{
+        @include toggle-button;
+    }
+    &__button-close{
+        @include toggle-button;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+    }
+    &__show-logo{
+        position: fixed;
+        z-index: 1000;
+    }
+    &__hidden-buttonHamburger{
+        opacity: 0;
+    }
+
+    @include breakpoints (medium) {
+        display: flex;
+        &__head{
+            @include space (padding, top, initial);      
+        }
+        &__logo{
+            @include space (margin, right, 70px);       
+        }
+        &__button-hamburger,
+        &__button-close {
+            display: none;
+        }      
+    }
+}
+

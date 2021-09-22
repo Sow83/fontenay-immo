@@ -1,0 +1,13 @@
+
+ /*------------------------------------*\
+  #Bouton 
+\*------------------------------------*/  
+
+.btn{
+    @include btn; 
+}
+// La question que je me pose c'est pourquoi faire un mixin pour le 
+// bouton (btn) alors que le code peut etre ici sans etre dupliqué 
+// ailleurs 
+
+//  le petit bouton (btn--small) peut etre inclus dans le mixin (btn)

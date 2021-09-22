@@ -1,0 +1,13 @@
+{
+  "name": "fontenay-immo",
+  "version": "1.0.0",
+  "description": "Ce projet est maintenable et modulaire grâce à la mise en œuvre de structures de nommage et de fichiers conçues, telles que BEM, et à l'utilisation de SASS, un précompilateur CSS.",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:public/css/style.css"
+  },
+  "keywords": [],
+  "author": "taftaf",
+  "license": "ISC",
+  "dependencies": {}
+}

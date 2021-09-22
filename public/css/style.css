@@ -1,0 +1,874 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+  #Général
+\*------------------------------------*/
+/**
+ * Le font-size par défaut(mobile et destop) est 16px c'est le meme que celui  
+ * des navigateurs donc les paragraphes sont de 16px
+ */
+/**
+ * Meilleure pratique box-sizing: https://css-tricks.com/box-sizing/
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.056rem;
+  color: #3d3d3d;
+  line-height: 1.5;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+h5 {
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 65em) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: 0.4rem;
+  }
+}
+/*------------------------------------*\
+  #Bouton 
+\*------------------------------------*/
+.btn {
+  width: 174px;
+  height: 2.5rem;
+  font-size: 12px;
+  color: white;
+  background-color: #e2554b;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.188rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: rgba(226, 85, 75, 0.9);
+  font-weight: bold;
+}
+
+/**
+* 1. Dans le partiel typographiy tous les width des images sont à 100% donc
+*    responsives
+*/
+.header {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 1.25rem 0;
+}
+.header__head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.563rem;
+}
+.header__logo {
+  width: 200px;
+  /* [1] */
+  padding-right: 30px;
+}
+.header__button-hamburger {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+}
+.header__button-close {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+.header__show-logo {
+  position: fixed;
+  z-index: 1000;
+}
+.header__hidden-buttonHamburger {
+  opacity: 0;
+}
+@media screen and (min-width: 65em) {
+  .header {
+    display: flex;
+  }
+  .header__head {
+    padding-top: initial;
+  }
+  .header__logo {
+    margin-right: 70px;
+  }
+  .header__button-hamburger, .header__button-close {
+    display: none;
+  }
+}
+
+/**
+ * 1. C'est pour que la nav soit au dessus du caroussel(swiper) en tablet et mobile;
+ */
+.nav {
+  position: fixed;
+  z-index: 100;
+  /* [1]*/
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  transform: translateX(-150%);
+}
+.nav__main {
+  padding-left: 2rem;
+  margin-top: 4.688rem;
+}
+.nav__main-link {
+  display: block;
+  padding-bottom: 0.625rem;
+  font-size: 1.5rem;
+  color: #3d3d3d;
+  line-height: 3.5;
+}
+.nav__social-links {
+  display: flex;
+  align-items: center;
+  width: 225px;
+  margin: auto;
+}
+.nav__social-link {
+  color: #e2554b;
+  display: block;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  margin-right: 13px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  padding: 6px;
+}
+.nav__show-nav {
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0);
+}
+@media screen and (min-width: 65em) {
+  .nav {
+    position: initial;
+    transform: translateX(0);
+    display: flex;
+  }
+  .nav__main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding-left: initial;
+    margin-top: initial;
+  }
+  .nav__main-list {
+    transition: all 0.3s ease-in-out;
+    flex: 1 0 auto;
+  }
+  .nav__main-link {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-bottom: initial;
+    font-size: 1.333rem;
+    text-align: center;
+  }
+  .nav__main-link:hover {
+    background-color: whitesmoke;
+  }
+  .nav__main-link:focus {
+    color: #e2554b;
+    background-color: whitesmoke;
+  }
+  .nav__social-links {
+    width: initial;
+    margin: initial;
+    margin-left: 50px;
+  }
+  .nav__social-link:hover {
+    transform: scale(1.2);
+    color: white;
+    background-color: #e2554b;
+  }
+}
+
+.form__title {
+  margin-bottom: 0.625rem;
+}
+.form__field {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.form__btn {
+  width: 174px;
+  height: 2.5rem;
+  font-size: 12px;
+  color: white;
+  background-color: #e2554b;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.188rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.form__btn:hover {
+  background-color: rgba(226, 85, 75, 0.9);
+  font-weight: bold;
+}
+
+/*------------------------------------*\
+  #Caroussel swiper
+\*------------------------------------*/
+.banner {
+  width: 100%;
+  height: 100vh;
+}
+.banner__slide {
+  text-align: center;
+  font-size: 2.4rem;
+  /* centre le texte des slides verticalement et horizontalement */
+  color: white;
+  background-position: center;
+  background-size: cover;
+}
+.banner__slide-1 {
+  background-image: url("../images/slides/slide-1.jpg");
+}
+.banner__slide-2 {
+  background-image: url("../images/slides/slide-2.jpg");
+}
+.banner__slide-3 {
+  background-image: url("../images/slides/slide-3.jpg");
+}
+.banner__slide-4 {
+  background-image: url("../images/slides/slide-4.jpg");
+}
+.banner__overlay {
+  background-color: rgba(52, 49, 45, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner__pagination {
+  height: 23vh;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid white;
+  width: 12px;
+  height: 12px;
+  background-color: #e2554b;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e2554b;
+}
+
+/*------------------------------------*\
+  #presentation
+\*------------------------------------*/
+/**
+ * 1. C'est une correction de line height. Les line-height du titre et du texte sont différents
+ *    ce qui crée un décallage entre ces derniers. Le margin-top est venu résoudre ce décallage
+ */
+.presentation {
+  max-width: 1150px;
+  margin: auto;
+  padding: 2.875rem 1.25rem 2.875rem;
+  text-align: center;
+}
+.presentation__title {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 40em) {
+  .presentation {
+    display: flex;
+    justify-content: space-between;
+    text-align: initial;
+  }
+  .presentation__title {
+    text-align: end;
+    width: 31.707%;
+    margin-top: -13px;
+    /* [1] */
+  }
+  .presentation__text {
+    width: 65.853%;
+  }
+}
+
+/*------------------------------------*\
+  #Why us
+\*------------------------------------*/
+.whyUs {
+  background-color: #fafafa;
+}
+.whyUs__content {
+  max-width: 1150px;
+  margin: auto;
+  padding: 6.25rem 1.25rem 6.25rem;
+}
+.whyUs__item {
+  text-align: center;
+}
+.whyUs__icon {
+  width: auto;
+}
+.whyUs__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.whyUs__item-tilte {
+  font-weight: 500;
+  margin: 10px 0;
+}
+@media screen and (min-width: 40em) {
+  .whyUs__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  .whyUs__item {
+    flex: 0 1 calc(100%/2 - 0.625rem);
+  }
+}
+@media screen and (min-width: 65em) {
+  .whyUs__item {
+    flex: 0 1 calc(100%/4 - 1.25rem);
+  }
+}
+
+/*------------------------------------*\
+  #properties
+\*------------------------------------*/
+.properties {
+  background-color: whitesmoke;
+}
+.properties__center {
+  max-width: 1150px;
+  margin: auto;
+  padding: 3rem 1.25rem 3rem;
+}
+.properties__header {
+  text-align: center;
+}
+.properties__title {
+  font-weight: 200;
+}
+.properties__underline {
+  width: 3.125rem;
+  height: 0.156rem;
+  background-color: #e2554b;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+.properties__content {
+  margin-top: 73px;
+  margin-bottom: 55px;
+}
+.properties__item {
+  border: 1px solid #e6e6e6;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  overflow: hidden;
+}
+.properties__img {
+  transition: all 0.3s ease-in-out;
+}
+.properties__img:hover {
+  transform: scale(1.05);
+}
+.properties__infos {
+  border-bottom: 1px solid #e6e6e6;
+}
+.properties__infos-title {
+  font-weight: 500;
+}
+.properties__price {
+  font-size: 16pt;
+  color: #e2554b;
+  display: block;
+  padding-bottom: 1rem;
+}
+.properties__area-infos {
+  padding: 15px 2px;
+}
+.properties__btn {
+  width: 174px;
+  height: 2.5rem;
+  font-size: 12px;
+  color: white;
+  background-color: #e2554b;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.188rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+.properties__btn:hover {
+  background-color: rgba(226, 85, 75, 0.9);
+  font-weight: bold;
+}
+@media screen and (min-width: 40em) {
+  .properties__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .properties__item {
+    flex: 0 1 calc(100%/2 - 0.625rem);
+  }
+}
+@media screen and (min-width: 65em) {
+  .properties__item {
+    flex: 0 1 calc(100%/3 - 1.25rem);
+  }
+}
+
+/*------------------------------------*\
+  #Our agents
+\*------------------------------------*/
+.ourAgents {
+  max-width: 1150px;
+  margin: auto;
+  padding: 3rem 1.25rem 0;
+  text-align: center;
+}
+.ourAgents__title {
+  font-weight: 200;
+}
+.ourAgents__swiper {
+  padding-bottom: 3rem;
+  max-width: 600px;
+}
+.ourAgents__underline {
+  width: 3.125rem;
+  height: 0.156rem;
+  background-color: #e2554b;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+.ourAgents__img-container {
+  width: 100px;
+  height: 130px;
+  margin: auto;
+}
+.ourAgents__name {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.ourAgents__tel {
+  margin: 1rem 0;
+}
+.ourAgents__icon-tel {
+  width: 14px;
+  height: 14px;
+  margin-right: 13px;
+}
+.ourAgents__number-tel {
+  color: #3d3d3d;
+  font-weight: bold;
+}
+.ourAgents__icon-mail {
+  width: 14px;
+  height: 14px;
+  margin-right: 13px;
+}
+.ourAgents__mail {
+  color: #e2554b;
+}
+@media screen and (min-width: 40em) {
+  .ourAgents__img-container {
+    width: 150px;
+    height: 193px;
+  }
+}
+
+/*------------------------------------*\
+  #Call to action
+\*------------------------------------*/
+.call-to-action {
+  background-color: whitesmoke;
+}
+.call-to-action__content {
+  max-width: 1150px;
+  margin: auto;
+  padding: 3.375rem 1.25rem 3rem;
+}
+.call-to-action__text {
+  font-size: 1.875rem;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-align: center;
+}
+.call-to-action__bold {
+  font-weight: 500;
+}
+.call-to-action__btn {
+  width: 174px;
+  height: 2.5rem;
+  font-size: 12px;
+  color: white;
+  background-color: #e2554b;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.188rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+.call-to-action__btn:hover {
+  background-color: rgba(226, 85, 75, 0.9);
+  font-weight: bold;
+}
+@media screen and (min-width: 65em) {
+  .call-to-action__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .call-to-action__text {
+    margin-bottom: initial;
+  }
+  .call-to-action__btn {
+    margin: initial;
+  }
+}
+
+/*------------------------------------*\
+  #Testimonials
+\*------------------------------------*/
+.testimonials {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.testimonials__header {
+  position: absolute;
+  z-index: 2;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.testimonials__underline {
+  width: 3.125rem;
+  height: 0.156rem;
+  background-color: #e2554b;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+.testimonials__content {
+  width: 100%;
+  height: 60vh;
+}
+.testimonials__slide {
+  font-family: "Raleway", sans-serif;
+  background-position: center;
+  background-size: cover;
+}
+.testimonials__slide-1 {
+  background-image: url("../images/testimonials/testimonial-1.jpg");
+}
+.testimonials__slide-2 {
+  background-image: url("../images/testimonials/testimonial-2.jpg");
+}
+.testimonials__slide-3 {
+  background-image: url("../images/testimonials/testimonial-3.jpg");
+}
+.testimonials__slide-4 {
+  background-image: url("../images/testimonials/testimonial-4.jpg");
+}
+.testimonials__overlay {
+  background-color: rgba(52, 49, 45, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials__text {
+  max-width: 80vw;
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.testimonials__name {
+  color: red;
+  font-size: 18px;
+  display: block;
+  margin-top: 20px;
+}
+.testimonials__button-next, .testimonials__button-prev {
+  color: #e2554b;
+}
+@media screen and (min-width: 40em) {
+  .testimonials__header {
+    top: 15px;
+  }
+  .testimonials__text {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 65em) {
+  .testimonials__text {
+    max-width: 700px;
+  }
+}
+
+/*------------------------------------*\
+  #Our partners 
+\*------------------------------------*/
+.partners {
+  max-width: 1150px;
+  margin: auto;
+  padding: 3rem 1.25rem 3rem;
+  text-align: center;
+}
+.partners__title {
+  font-weight: 200;
+}
+.partners__underline {
+  width: 3.125rem;
+  height: 0.156rem;
+  background-color: #e2554b;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+.partners__content-logo {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.partners__content-logo:hover {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+@media screen and (min-width: 40em) {
+  .partners__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .partners__content-logo {
+    flex: 0 1 calc(25% - 1.25rem);
+    padding: 0;
+  }
+}
+
+/*------------------------------------*\
+  #Footers
+\*------------------------------------*/
+.footer {
+  background-color: #303030;
+  color: white;
+}
+.footer__center {
+  max-width: 1150px;
+  margin: auto;
+  padding: 3rem 1.25rem 3rem;
+}
+.footer__logo {
+  width: 200px;
+  padding-right: 30px;
+}
+.footer__social-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  max-width: 175px;
+}
+.footer__social-link {
+  color: white;
+  background: #3d3d3d;
+  display: block;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  padding: 6px;
+}
+.footer__social-link:hover {
+  background-color: #e2554b;
+}
+.footer__space {
+  margin: 30px 0;
+}
+.footer__link {
+  color: #ababab;
+  display: block;
+  padding: 10px 10px 10px 0;
+}
+.footer__address {
+  color: #e2554b;
+}
+@media screen and (min-width: 40em) {
+  .footer__center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer__block {
+    flex: 0 1 calc(50% - 1.25rem);
+  }
+}
+@media screen and (min-width: 65em) {
+  .footer__block {
+    flex: 0 1 calc(25% - 1.25rem);
+  }
+  .footer__space {
+    margin: initial;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,112 @@
+//  Conteneur de mise en page
+// @mixin layout-container ($paddings-top-bottom: 3rem, $paddings-left-right: 1.25rem) {
+//     max-width: 1150px;
+//     margin: auto;
+//     padding: $paddings-top-bottom $paddings-left-right;
+// }
+
+@mixin layout-container ($padding-top: 3rem, $paddings-left-right: 1.25rem, $padding-bottom: 3rem) {
+    max-width: 1150px;
+    margin: auto;
+    padding: $padding-top $paddings-left-right $padding-bottom;
+}
+
+// Gère les deux boutons du menu hamburger(button-hamburger et button-colose) 
+@mixin toggle-button{
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    font-size: $font-size-large;
+}
+
+// Gère les diférentes proriétes semblablables à tous les boutons,
+// donc il est inclu dans tous les boutons
+@mixin btn(){   
+    width: 174px;
+    height: 2.5rem;
+    font-size: 12px;
+    color: $default-btn-color;
+    background-color: $color-primary;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+    transition: $transition;
+    &:hover{         
+        background-color: rgba($color-primary, .9);
+        font-weight: bold;
+    } 
+    // NB: on peut créer un btn modificateur ici mais je ne vois pas la
+    //  nécessité de le faire. Avec le mixin on peut avoir tout type de bouton
+}
+
+
+// mixin pour les bordures
+// @mixin border($border-width: 2px) {
+//     border: $border-width solid $default-border-color;
+// }
+
+// social icons
+@mixin socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 15rem;
+    margin: auto;
+    height: 2.5rem;
+}
+// social icon
+@mixin socialIcon {
+    font-size: 1.25rem;
+    width: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $social-icon-color;
+    transition: $transition;    
+    margin-top: 0.063rem;
+    margin-left: 0.063rem;   
+    &:hover{
+        @include breakpoints(desktop){
+        font-size: 1.75rem;
+        }
+    }   
+}
+
+
+// Media querries
+// Il n'exite pas de point d'arrêt mobile parce que le site est en mobile first
+@mixin breakpoints ($point){
+    @if ($point == small) {
+        @media screen and (min-width: 40em) {
+            @content;
+        }
+    }
+    @else if ($point == medium) {
+        @media screen and (min-width: 65em) {
+            @content;
+        }
+    }
+    // @else if($point == large){
+    //     @media screen and (min-width: 71.875em) { //meme dimention que le layout
+    //         @content;
+    //     }
+    // }
+    @else {
+        @content;
+    }
+}
+
+
+// underline
+@mixin underline (){
+    width: 3.125rem;
+    height: 0.156rem;
+    background-color: #e2554b;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
