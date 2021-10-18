@@ -1,47 +1,92 @@
- /**
+/**
  * 1. Dans le partiel typographiy tous les width des images sont à 100% donc
  *    responsives
  */
-.header{
-    @include layout-container( $padding-top: 0, $padding-bottom: 0);   
-    &__head{
-        display: flex;
-        justify-content: space-between;
-        @include space (padding, top, $small);
-    }
-    &__logo{
-        width: 200px; /* [1] */
-        @include space (padding, right, 30px);
-    }
-    &__button-hamburger{
-        @include toggle-button;
-    }
-    &__button-close{
-        @include toggle-button;
-        position: absolute;
-        top: 1.5rem;
-        right: 2rem;
-    }
-    &__show-logo{
-        position: fixed;
-        z-index: 1000;
-    }
-    &__hidden-buttonHamburger{
-        opacity: 0;
-    }
 
-    @include breakpoints (medium) {
+ 
+/*--------------------------------------------------------------*\
+  #header pages
+\*--------------------------------------------------------------*/
+.header {
+    @include box-shadow;
+    &__center {
+        @include layout-container($padding-top: 0, $padding-bottom: 0);
+    }
+    &__head {
         display: flex;
-        &__head{
-            @include space (padding, top, initial);      
+        align-items: center;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        min-width: 12.5rem;
+        /* [1] */
+    }
+    &__button-toggle {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 0;
+        max-width: 36px;
+        max-height: 36px;
+    }
+    &__hidden-nav {
+        display: none;
+    }
+    &__js-toggle-button .header__hidden-nav {
+        display: block;
+    }
+    &__js-toggle-button .header__display-nav {
+        display: none;
+    }
+    @include breakpoints(large) {
+        &__center {
+            display: flex;
         }
-        &__logo{
-            @include space (margin, right, 70px);       
+        &__head {
+            padding-top: initial;
         }
-        &__button-hamburger,
-        &__button-close {
+        &__logo {
+            margin-right: 1.25rem;
+        }
+        &__button-toggle {
             display: none;
-        }      
+        }
     }
 }
+
+
+/*--------------------------------------------------------------*\
+  # Blog page content header
+\*--------------------------------------------------------------*/
+.blog{
+    &__article {
+        margin-bottom: 3.75rem;
+        padding-bottom: 1.75rem;
+        box-shadow: 0 1px 0 0 rgba($color-secondary, 10%);
+    }
+    &__title {
+        margin-bottom: 1.25rem;
+        font-weight: 600;
+    }
+    &__auteurs {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+    }
+    &__auteur {
+        font-size: 0.875rem;
+        color: $color-dark-gray;
+        margin: 0 0.625rem;
+    }
+    &__name {
+        padding-left: 0.313rem;
+        color: $color-dark-gray;
+    }
+   
+}
+
 

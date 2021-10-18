@@ -1,0 +1,54 @@
+.blog-single {
+    // voir le partiel header(_header) pour le header
+    @include layout-container;
+    &__list {
+        list-style: inside;
+        margin-bottom: 1.25rem;
+    }
+    &__form {
+        max-width: 40.375rem;
+    }
+    &__comments {
+        margin-top: 3.125rem;
+    }
+    &__comment {
+        margin-bottom: 1.875rem;
+    }
+    &__form-field {
+        max-width: 20.188rem;
+    }
+    &__commentator-info {
+        display: flex;
+        margin-bottom: 0.938rem;
+    }
+    &__answer {
+        margin-left: 1.875rem;
+    }
+    &__img {
+        margin-right: 1.25rem;
+        max-width: 4.375rem;
+        @include border-radius(50%);
+        object-fit: cover;
+    }
+    &__replay {
+        color: $blog-single-replay-color;
+        margin-right: 0.625rem;
+        font-size: 0.875rem;
+        &:hover {
+            color: $blog-single-replay-color-hover;
+        }
+    }
+    &__time {
+        color: $blog-single-time-color;
+    }
+    &__text {
+        padding-left: 0.625rem;
+    }
+      @include breakpoints(large) {
+        display: flex;
+        justify-content: space-between;
+        &__article {
+            flex: 0 1 calc(60% - 1.25rem);
+        }
+    }
+}

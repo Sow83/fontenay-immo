@@ -2,6 +2,7 @@
 @import "./utilities/mixins";
 
 @import "./base/reset";
+@import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
@@ -10,8 +11,15 @@
 @import "./layout/navigation";
 @import "./layout/form";
 @import "./layout/footer";
+@import "./layout/sidebar";
+@import "./layout/body-container";
 
 @import "./pages/home";
+@import "./pages/about";
+@import "./pages/blog";
+@import "./pages/contacts";
+@import "./pages/property";
+@import "./pages/blog-single";
 
 
 

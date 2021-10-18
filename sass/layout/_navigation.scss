@@ -1,96 +1,74 @@
 /**
  * 1. C'est pour que la nav soit au dessus du caroussel(swiper) en tablet et mobile;
  */
-.nav{
+
+.nav {
     position: fixed;
-    z-index: 100; /* [1]*/
-    top: 0;
-    left: 0;
+    z-index: 100;
+    /* [1]*/
+    left: -150%;
     height: 100%;
     width: 100%;
     background-color: $nav-color;
-    // transition: $transition;
-    transform: translateX(-150%);
-    &__main{
-       @include space (padding, left, $regular);
-       @include space (margin, top, $large);
+    @include transition($timing-function: cubic-bezier(0,.77,.99,.23));
+    @include box-shadow($nav-box-shadow-color);
+    &__main {
+        padding-left: 2rem;
+        margin-top: 2rem;
     }
-    &__main-link{
+    &__main-link {
         display: block;
-        @include space (padding, bottom, $xs);       
-        font-size: $font-size-large;
-        color: $nav-main-link;
+        color: $nav-main-link-color;
         line-height: 3.5;
     }
-    &__social-links{
+    &__social-links {
         display: flex;
         align-items: center;
-        width: 225px;
+        width: 14.063rem;
         margin: auto;
     }
-    &__social-link{
-        color: $nav-social-link;
-        display: block;
-        border: 1px solid $nav-social-link-border-color;
-        border-radius: 50%;
-       @include space (margin, right, 13px);
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        transition: $transition;
-        @include space (padding, all, 6px);       
+    &__social-link {
+        @include social-link;
+        color: $nav-social-link-color;
+        @include border-default($nav-social-link-border-color);
+        @include border-radius(50%);
     }
-    &__show-nav{
-        transition: $transition;
-        transform: translateX(0);
+    &__js-show-nav {
+        left: 0%;
     }
-    @include breakpoints (medium) {
-        position: initial;  
-        transform: translateX(0);
+    @include breakpoints(large) {
+        position: initial;
         display: flex;
-        &__main{
-            display: flex;    
+        box-shadow: initial;
+        &__main {
+            display: flex;
             flex-grow: 1;
             justify-content: center;
-            @include space (padding, left, initial);
-            @include space (margin, top, initial);
-         }
-         &__main-list{
-            transition: $transition;
-            flex: 1 0 auto;
-            
-            // &:hover{
-            //     // background-color: $nav-main-list-bg-color;
-            // }
+            padding-left: initial;
+            margin-top: initial;
         }
-        &__main-link{
-            @include space (padding, left, $xs);       
-            @include space (padding, right, $xs);       
-            @include space (padding, bottom, initial);   
-            font-size: 1.333rem;
-            text-align: center;   
-            &:hover{
-                background-color: $nav-main-list-bg-color;   
-            } 
-            &:focus{
-                color: $color-primary;
-                background-color: $nav-main-list-bg-color;
-            } 
+        &__main-link {
+            padding-bottom: initial;
+            padding: 0 0.625rem;
+            font-size: 1.3rem;
+            text-align: center;
+            white-space: nowrap;
+            &:hover {
+                background-color: $nav-main-link-hover-bg-color;
+            }
         }
-        &__social-links{
+        &__active-main-link {
+            background-color: $nav-main-link-bg-color;
+            color: $nav-main-link-active-color;
+        }
+        &__social-links {
             width: initial;
             margin: initial;
-            @include space (margin, left, 50px);       
+            margin-left: 0.5rem;
         }
-        &__social-link:hover{
-            transform: scale(1.2);      
-            color: white;
-            background-color: $color-primary;
-        }        
+        &__social-link:hover {
+            transform: scale(1.2);
+            background-color: $nav-social-link-hover-bg-color;
+        }
     }
 }
-
-
-
-
-   

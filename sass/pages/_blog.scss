@@ -1,0 +1,17 @@
+.blog {
+    // voir le partiel header(_header) pour le header
+    @include layout-container;
+    &__btn {
+        @include btn;
+        margin-top: 1.25rem;
+    }
+    @include breakpoints(large){
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content{
+        flex: 0 1 calc(60% - 1.25rem);
+    }
+}
+
+

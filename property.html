@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>fontenay-immobilier</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="public/images/favicons/favicon-32x32.ico" sizes="any">
+    <link rel="icon" href="public/images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="public/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- font-awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Swiper CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="public/css/style.css">
+
+    <!-- =======================================================
+  * Template Name: Fontenay immobilier
+  * Author: Mouhamadou Moustapha Sow
+  ======================================================== -->
+</head>
+
+<body>
+    <!-- ======== header ======== -->
+    <header class="header">
+        <div class="header__center">
+            <div class="header__head">
+                <button class="header__button-toggle">
+                    <img class="header__display-nav" src="public/images/icons/icon-display.svg" alt="display-nav">
+                    <img class="header__hidden-nav" src="public/images/icons/icon-hidden.svg" alt="hidden-nav">
+                </button>
+                <a class="header__logo" href="index.html"><img src="public/images/logo.png" src="" alt="logo"></a>
+            </div><!-- End header-head  -->
+
+            <nav class="nav">
+                <ul class="nav__main">
+                    <li><a class="nav__main-link" href="index.html">Accueil</a></li>
+                    <li><a class="nav__main-link" href="about.html">Nous Connaitre</a></li>
+                    <li><a class="nav__main-link  nav__active-main-link" href="property.html">Propriétés</a></li>
+                    <li><a class="nav__main-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav__main-link" href="contacts.html">Contacts</a></li>
+                </ul>
+                <ul class="nav__social-links">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="nav__social-link"><i class=" fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home" target="_blank" class="nav__social-link"><i class=" fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.pinterest.fr/" target="_blank" class="nav__social-link"><i class=" fab fa-pinterest-p"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="nav__social-link"><i class=" fab fa-twitter"></i></a></li>
+                </ul>
+            </nav><!-- End nav -->
+
+        </div>
+    </header>
+    <!--======== End header ======== -->
+
+
+    <!-- ======== Property catalog ======== -->
+    <section class="catalog">
+        <h2><span>Catalogue des</span> Propriétés</h2>
+        <div class="catalog__underline"></div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur iste consequuntur illo quasi
+            laborum quisquam omnis sunt voluptatum dolorem quam? Quis soluta inventore temporibus odio illum
+            magnam veritatis sunt placeat.</p>
+
+        <div class="catalog__filter-btns">
+            <button class="catalog__filter-btn  catalog__js-active-filter-btn" data-category="grand-paris">Grand
+                Paris</button>
+            <button class="catalog__filter-btn" data-category="londre">Londre</button>
+            <button class="catalog__filter-btn" data-category="amsterdam">Amsterdam</button>
+            <button class="catalog__filter-btn" data-category="new-york">New york</button>
+            <button class="catalog__filter-btn" data-category="quebec">Quebec</button>
+        </div><!-- filter-btns  -->
+
+        <div id="js-items" class="catalog__items">
+            <!-- javascript data -->
+        </div>
+
+
+    </section>
+    <!-- ======== End Property catalog ======== -->
+
+     <!-- ======== Footer ======== -->
+     <section class="footer">
+        <div class="footer__center">
+            <div class="footer__item">
+                <a href="index.html" class="footer__logo"><img src="public/images/logo.png" alt="logo"></a>
+                <ul class="footer__social-links">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.pinterest.fr/" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-pinterest-p"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-twitter"></i></a></li>
+                </ul>
+            </div><!-- End item 1 -->
+
+            <div class="footer__item">
+                <h3 class="footer__title">Navigation</h3>
+                <ul>
+                    <li><a class="footer__link" href="index.html">Accueil</a></li>
+                    <li><a class="footer__link" href="about.html">Nous Connaitre</a></li>
+                    <li><a class="footer__link" href="property.html">Propriétés</a></li>
+                    <li><a class="footer__link" href="contacts.html">Contacts</a></li>
+                </ul>
+            </div><!-- End item 2 -->
+
+            <div class="footer__item">
+                <h3 class="footer__title">Pour les clients</h3>
+                <ul>
+                    <li><a class="footer__link" href="#">Connexion</a></li>
+                    <li><a class="footer__link" href="#">Forum</a></li>
+                    <li><a class="footer__link" href="#">Promotions</a></li>
+                    <li><a class="footer__link" href="#">Informations</a></li>
+
+                </ul>
+            </div><!-- End item 3 -->
+
+            <div class="footer__item">
+                <h3 class="footer__title">Nous contacter</h3>
+                <address>
+                    <p class="footer__address">9 rue césar Franck<br>78330 Fontenay Le Fleury</p>
+                    <p class="footer__address">Téléphone: <a class="footer__contact" href="tel:+13115552368"> (+33) 172273259</a><br>Fax: (+33)
+                        172273259</p>
+                    <p class="footer__address"> Mail: <a class="footer__contact" href="mailto:jim@rock.com"> info@fontenay-immo.com</a></p>
+                </address>
+            </div><!-- End item 4 -->
+        </div>
+    </section>
+    <!-- ======== End Footer ======== -->
+
+    <!-- Swiper JS file -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

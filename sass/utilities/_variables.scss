@@ -1,203 +1,127 @@
-// noms des couleurs
-$color-primary:hsl(4, 72%, 59%);
-$color-white: hsl(0, 0, 100%);
-$color-white-smoke: hsl(0, 0%, 96%);
-
-// $color-white-smoke:hsl(0, 0%, 93%);
-// $color-mortar-grey: hsl(0, 0%, 35%);
-// $color-acadia:hsl(38,8%,19%);
-// $color-solitude: hsl(220,23%,97%);
-$color-secondary:hsl(0, 0%, 24%);
-$color-night-rider: hsl(0,0%,19%);
-$color-dark-gray: hsl(0, 0%, 67%);
-
-
+// ----------------------------------------------------------------------------
+// Noms des couleurs:
+// ----------------------------------------------------------------------------
+$color-primary           : hsl(4, 72%, 59%); 
+$color-secondary         : hsl(0, 0%, 24%);
+$color-acadia            : hsl(34, 7%, 19%);
+$color-night-rider       : hsl(0, 0%, 19%);
+$color-dark-gray         : hsl(0, 0%, 67%);
+$gainsboro               : hsl(0, 0%, 90%); 
+$color-white-smoke       : hsl(0, 0%, 96%);
+$color-white-smoke-light : hsl(0, 0%, 98%);
+$color-white             : hsl(0, 0, 100%);
 
 
-// Lien our nommer le nom des couleurs :https://www.color-blindness.com/color-name-hue/
-
-
-// Méthode de la sématique des couleurs: 
-
-//  j'ai combiné la notation BEM du composant en question (Ex:form__field) 
-//  avec sa propriété (Ex: background-color => bg-color), ce qui devient 
-//  $form-field-bg-color. Ainsi, la variable $form-field-bg-color définit 
-//  la couleur de fond des champs du formulaire.
-//  1) Avantage: 
-//    Toutes les couleurs seront changer dans un seul endroit, ici, dans le 
-//    partiel " __variables".Je n'ai plus besoin de retourner dans les partiels.
-//    Ce qui facilite la maintenabilité. Le nom de la couleur sera générique dans
-//    la classe ".form__field"(donc ne sera  jamais changé) et aura aucune 
-//    contradiction en cas de changement de couleur dans le partiel "__variables".
-//  2) Inconvénient: 
-//    on doit créer une variable de couleur pour chaque sélecteur.
-//    Le code sera conséquent.
-
-
-
-// sémantiques des couleurs:
-
-
-// Partiel Typography (_typography.scss)
-$body-color:             $color-secondary;
-// $headings-color:         $color-acadia;
-
-
-//  Partiel header
-// $header-sidebar: $color-white;
-// Patiel navigation
-$nav-color: $color-white;
-$nav-main-list-bg-color: $color-white-smoke;
-$nav-main-link: $color-secondary;
-$nav-social-link: $color-primary;
-$nav-social-link-border-color: $color-white-smoke;
-
-
-// Partiel mixins:
-    // bouton (_mixins.scss)
-    $default-btn-color:               $color-white;
-    // $default-btn-hover-shadow-color: $color-primary;
-    // $default-btn-hover-color:        $color-white;
-
-
-    // mixins (mixins.scss)
-    // $default-border-color: $color-primary;
-    // $social-icon-color:    $color-primary;
-
-
-// Partiel footer
-// $footer-bg-color:            $color-acadia;
-// $footer-color:               $color-white;
-// $footer-title-color:         $color-primary;
-// $footer-link:                $color-mortar-grey;
-// $footer-social-icon:         $color-acadia;
-// $footer-link-hover:          $color-primary;
-
-
-// partiel form
-// $form-field-bg-color: $color-white;
-
-
-// partiel home:
-    // Section main-slides
-       
-
-  
-
-    // Section 
-    
-
-
-    // Section contact
-        // $contact-bg-color:   $color-solitude;
-        // $contact-link-color: $color-primary;
-
-    
-
-// Font families
-$font-family-base:   'Playfair Display', serif;
-$font-family-titles: 'Raleway', sans-serif; 
-
-// Line heights
-$line-height-base      : 1.5; //voir reset css
-$line-height-chefs-info: $line-height-base + 0.5;
-
-// border-radius
-$border-radius: 0.188rem;
-
-// letter-spacing
-$letter-spacing-base: 0.056rem;
-
-// Transitions
-$transition: all 0.3s ease-in-out;
+// ----------------------------------------------------------------------------
+// Noms de couleurs spécifiques aux éléments( nom du sélecteur + la propriété)
+// soit color ou bg-color (background-color).
+// ----------------------------------------------------------------------------
    
 
+    // Partiel base
+    $body-color: $color-secondary;
+
+    // Patiel navigation
+    $nav-color                      : $color-white;
+    $nav-main-link-color            : $color-secondary;
+    $nav-social-link-color          : $color-primary;
+    $nav-social-link-border-color   : $color-white-smoke;
+    $nav-main-link-hover-bg-color   : $color-white-smoke;
+    $nav-main-link-bg-color         : $color-white-smoke;
+    $nav-main-link-active-color     : $color-primary;
+    $nav-social-link-hover-bg-color : $color-white-smoke;
+    $nav-box-shadow-color           : $color-secondary;
+
+    // Partiel home
+        // Section slides
+        $slides-color                             : $color-white;
+        $swiper-pagination-bullet-border-color    : $color-white;
+        $swiper-pagination-bullet-bg-color        : $color-primary;
+        $swiper-pagination-bullet-active-bg-color : $color-primary;
+        // Section why us
+        $whyUs-bg-color: $color-white-smoke-light;
+        // section properties
+        $properties-bg-color            : $color-white-smoke;
+        $properties-item-border-color   : $gainsboro;
+        $properties-infos-border-bottom : $gainsboro;
+        $properties-price-color         : $color-primary;
+        // Section Our agents
+        $our-agents-number-tel-color : $color-secondary;
+        $our-agents-mail-color       : $color-primary;
+        // Section call to action
+        $call-to-action-bg-color : $color-white-smoke;
+        // Sectrion testimonials
+        $testimonials-color        : $color-white;
+        $testimonials-name-color   : $color-primary;
+        $testimonials-button-color : $color-primary;
+
+    // Partiel property (catalog)
+    $catalog-filter-btn-bg-color-hover     : $color-primary;
+    $catalog-filter-btn-js-active-bg-color : $color-primary;
+    $catalog-item-border-color             : $gainsboro;
+    $catalog-infos-border-bottom-color     : $gainsboro;
+    $catalog-price-color                   : $color-primary;
+
+    //  Partiel about
+    $aboutUs-bg-color             : $color-night-rider;
+    $aboutUs-color                : $color-white;
+    $aboutUs-text-color           : $color-dark-gray;
+    $team-item-border-color       : $gainsboro;
+    $team-name-color              : $color-primary;
+    $subscribe-bg-color           : $color-white-smoke;
+    $subscribe-input-border-color : $gainsboro;
+
+    // Partiel blog-single (blog-single-article1, blog-single-article2, blog-single-article3)
+    $blog-single-replay-color       : $color-dark-gray;
+    $blog-single-replay-color-hover : $color-primary;
+    $blog-single-time-color         : $color-dark-gray;
+
+    // Partiel contact
+    $contact-link: $color-primary;
+  
+    // Partiel sidebar
+    $sidebar-link-color            : $color-secondary;
+    $sidebar-link-hover-color      : $color-primary;
+    $sidebar-post-link-color       : $color-secondary;
+    $sidebar-post-link-hover-color : $color-primary;
+    $sidebar-time-color            : $color-dark-gray;
+    $sidebar-border-left-color     : $gainsboro;
+
+    // partiel form
+    $form-field-border-color: $gainsboro;
+  
+    // Partiel footer
+    $footer-bg-color                   : $color-night-rider;
+    $footer-title-color                : $color-white;
+    $footer-title                      : $color-white;
+    $footer-logo-bg-color              : $color-white;
+    $footer-social-link-color          : $color-white;
+    $footer-social-link-bg-color       : $color-secondary;
+    $footer-social-link-bg-color-hover : $color-primary;
+    $footer-link-color                 : $color-dark-gray;
+    $footer-link-hover-color           : $color-white;
+    $footer-address-color             : $color-dark-gray;
+    $footer-contact-color              : $color-primary;
+    $footer-contact-hover-color        : $color-white;
+ 
+
+// ----------------------------------------------------------------------------
+// Font families
+// ----------------------------------------------------------------------------
+$font-family-base   : 'Playfair Display', serif; //partiel base
+$font-family-titles : 'Raleway', sans-serif; // partiel typographie
 
 
+// ----------------------------------------------------------------------------
+// Line heights
+// ----------------------------------------------------------------------------
+$line-height-base: 1.5; //partiel base
 
 
-// Utiliser systématiquement les variables Sass ($variable) pour éviter les répétitions de code et favoriser la maintenance du projet.
-// Cette consigne concerne principalement :
-
-// les couleurs de texte
-// les couleurs de fond
-// les tailles de police
-// les breakpoints des Media Queries en Responsive
-// les margin et les padding
-// Aucune de ces valeurs ne devraient apparaître dans les styles de développement sans être associées à des variables.
-// Lien : https://www.alsacreations.com/outils/guidelines/Guidelines-CSS.md
-
-
-
-
-
-
-
-// C"est le lien pour le mixin des padding et margin. Je ne vois pas l'utilité de faire un mixin 
-// pour des valeurs aléatoires comme les margin et padding mais si je veux le faire ce lien
-//  est la meilleur méthode que j'ai vu sur le web:  https://codepen.io/ezos86/pen/QwQmZb
-
-// Voici l'exemple de code: 
-
-
-$xs     : 0.625rem;      //10px
-$small  : 1.563rem;      //25px; 
-$regular:     2rem;      //32px
-$medium : 3.125rem;      //50px;
-$large  : 4.688rem;      //75px;
-$xlarge : 6.250rem;      //100px;
-$xxlarge: 9.375rem;      //150px;
-
-@mixin space($type: margin, $direction: all, $amount: $medium){
-	@if $type == padding {
-		@if $direction == all{
-			padding: $amount;
-		} @else if $direction == top {
-			padding-top: $amount
-		} @else if $direction == left {
-			padding-left: $amount
-		} @else if $direction == right {
-			padding-right: $amount
-		} @else {
-			padding-bottom: $amount
-		}
-	} @else {
-		@if $direction == all{
-			margin: $amount;
-		} @else if $direction == top {
-			margin-top: $amount
-		} @else if $direction == left {
-			margin-left: $amount
-		} @else if $direction == right {
-			margin-right: $amount
-		} @else {
-			margin-bottom: $amount
-		}
-	}
-}
-
-
-
-// // Cours de sass (à voir)
-// //sass Typography as defined on http://sass-lang.com/styleguide/typography
-// //font families
-// $font-family-text: source-sans-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
-// $font-family-display: source-serif-pro, Georgia, "Times New Roman", Times, serif;
-// $font-family-code: source-code-pro, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-
-// //Weights
-// $font-weight-light:300;
-// $font-weight-regular: 400;
-// $font-weight-bold: 600;
-
-// //sizes
-
-$font-size-regular: 1rem;
-$font-size-small: $font-size-regular * 0.75;
-$font-size-large: $font-size-small * 2;
-$font-size-x-large: $font-size-regular * 2;
-$font-size-xx-large: $font-size-large * 2;
-$font-size-xxx-large: $font-size-x-large * 2;
-$font-size-xxxx-large: $font-size-xx-large * 2;
+// ----------------------------------------------------------------------------
+// letter-spacing
+// ----------------------------------------------------------------------------
+$letter-spacing-base   : 0.058rem; //typographie
+$letter-spacing-button : 0.1rem; //mixin btn et partiel property
 
 

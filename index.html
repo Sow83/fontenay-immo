@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fontenay-immo</title>
+
+    <title>fontenay-immobilier</title>
+
     <!-- Favicons -->
+    <link rel="icon" href="public/images/favicons/favicon-32x32.ico" sizes="any">
+    <link rel="icon" href="public/images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="public/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- font-awesome CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
@@ -22,246 +28,211 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="public/css/style.css">
 
+<!-- =======================================================
+  * Template Name: Fontenay immobilier
+  * Author: Mouhamadou Moustapha Sow
+======================================================== -->
 </head>
 
 <body>
     <!-- ======== header ======== -->
     <header class="header">
-        <div class="header__head">
-            <img src="public/images/logo.svg" class="header__logo" src="" alt="logo">
+        <div class="header__center">
+            <div class="header__head">
+                <button class="header__button-toggle">
+                    <img class="header__display-nav" src="public/images/icons/icon-display.svg" alt="display-nav">
+                    <img class="header__hidden-nav" src="public/images/icons/icon-hidden.svg" alt="hidden-nav">
+                </button>
+                <a class="header__logo" href="index.html"><img src="public/images/logo.png" src="" alt="logo"></a>
+            </div><!-- End header-head -->
 
-            <button class="header__button-hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
+            <nav class="nav">
+                <ul class="nav__main">
+                    <li><a class="nav__main-link  nav__active-main-link" href="index.html">Accueil</a></li>
+                    <li><a class="nav__main-link" href="about.html">Nous Connaitre</a></li>
+                    <li><a class="nav__main-link" href="property.html">Propriétés</a></li>
+                    <li><a class="nav__main-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav__main-link" href="contacts.html">Contacts</a></li>
+                </ul>
+                <ul class="nav__social-links">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="nav__social-link"><i
+                                class=" fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home" target="_blank" class="nav__social-link"><i
+                                class=" fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.pinterest.fr/" target="_blank" class="nav__social-link"><i
+                                class=" fab fa-pinterest-p"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="nav__social-link"><i
+                                class=" fab fa-twitter"></i></a></li>
+                </ul>
+            </nav><!-- End nav -->
+
         </div>
+    </header>
+    <!-- ======== End header ======== -->
 
-        <nav class="nav">
-            <ul class="nav__main">
-                <li class="nav__main-list"><a class="nav__main-link" href="#">Accueil</a></li>
-                <li class="nav__main-list"><a class="nav__main-link" href="#">Nous Connaitre</a></li>
-                <li class="nav__main-list"><a class="nav__main-link" href="#">Propriétés</a></li>
-                <li class="nav__main-list"><a class="nav__main-link" href="#">contact</a></li>
-            </ul>
-
-            <ul class="nav__social-links">
-                <li><a href="#" class="nav__social-link"><i class=" fab fa-facebook-f"></i></a></li>
-                <li><a href="#" class="nav__social-link"><i class=" fab fa-linkedin-in"></i></a></li>
-                <li><a href="#" class="nav__social-link"><i class=" fab fa-pinterest-p"></i></a></li>
-                <li><a href="#" class="nav__social-link"><i class=" fab fa-twitter"></i></a></li>
-            </ul>
-
-            <button class="header__button-close">
-                <i class="fas fa-times"></i>
-            </button>
-        </nav>
-
-    </header><!-- End header -->
-
-
-    <!-- ======== Swiper ======== -->
-    <section class="banner swiper mySwiper1">
+    <!-- ======== Slides ======== -->
+    <section class="slides swiper mySwiper1">
         <div class="swiper-wrapper">
-    
-            <div class="swiper-slide  banner__slide  banner__slide-1">
-                <div class="banner__overlay">
-                    <p>120, Avenue Anastasia CoralGables<br>625.000&euro;</p>
+            <div class="swiper-slide  slides__slide  slides__slide-1">
+                <div class="slides__overlay">
+                    <p>120, Avenue du Plaisir Sans Fin PARIS<br>625.000&euro;</p>
                 </div>
-            </div>
-    
-            <div class="swiper-slide  banner__slide  banner__slide-2">
-                <div class="banner__overlay">
-                    <p>120, Avenue Anastasia CoralGables<br>735.000&euro;</p>
-                </div>
-            </div>
-    
-            <div class="swiper-slide  banner__slide  banner__slide-3">
-                <div class="banner__overlay">
-                    <p>120, Avenue Anastasia CoralGables<br>525.000&euro;</p>
-                </div>
-            </div>
-    
-            <div class="swiper-slide  banner__slide  banner__slide-4">
-                <div class="banner__overlay">
-                    <p>120, Avenue Anastasia CoralGables<br>495.000&euro;</p>
-                </div>
-            </div>
-    
-        </div>
-        <div class="swiper-pagination banner__pagination"></div>
-    </section><!-- End Swiper -->
+            </div><!-- End slide 1 -->
 
+            <div class="swiper-slide  slides__slide  slides__slide-2">
+                <div class="slides__overlay">
+                    <p>115, Place J’y Suis J’y Reste AMSTERDAM<br>735.000&euro;</p>
+                </div>
+            </div><!-- End slide 2 -->
+
+            <div class="swiper-slide  slides__slide  slides__slide-3">
+                <div class="slides__overlay">
+                    <p>220, Avenue Coup de Coeur LONDRE<br>525.000&euro;</p>
+                </div>
+            </div><!-- End slide 3 -->
+
+            <div class="swiper-slide  slides__slide  slides__slide-4">
+                <div class="slides__overlay">
+                    <p>215, Square Surprise des Anges NEW YORK<br>495.000&euro;</p>
+                </div>
+            </div><!-- End slide 4 -->
+        </div><!-- End swiper-wrapper -->
+
+        <div class="swiper-pagination slides__pagination"></div>
+
+    </section>
+    <!-- ======== End Slides ======== -->
 
     <!-- ======== presentation ======== -->
     <section class="presentation">
-
         <h1 class="presentation__title">Fontenay-immo Distinctio Aspernatur</h1>
         <p class="presentation__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis numquam quis
             quaerat. Consequuntur, illo, distinctio aspernatur officiis beatae nesciunt facilis, incidunt nobis
             sunt voluptate rem voluptas quisquam temporibus natus laboriosam? Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Voluptatem illo necessitatibus quae delectus odio.
         </p>
-
-    </section><!-- presentation -->
-
-
-
+    </section>
+    <!-- ======== End presentation ======== -->
 
     <!-- ======== Why us ======== -->
     <section class="whyUs">
-
-
-
-        <div class="whyUs__content">
+        <div class="whyUs__center">    
             <div class="whyUs__item">
                 <img class="whyUs__icon" src="public/images/icons/icon-1.png" alt="icon">
-                <h4 class="whyUs__item-tilte">Relation de Confiance</h4>
-                <p>Farem resif, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi
-                    excepturi, veniam culpa facere reiciendis officia</p>
-            </div>
+                <h3 class="whyUs__item-tilte">Relation de Confiance</h3>
+                <p>Farem resif, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi excepturi, veniam culpa facere reiciendis officia</p>
+            </div><!-- End item 1 -->
 
             <div class="whyUs__item">
-                <img class="whyUs__icon" src="public/images/icons/icon-2.png" alt="icopn">
-                <h4 class="whyUs__item-tilte">Logement Personnalisé</h4>
-                <p>Dalam ipsum, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi
-                    excepturi, veniam culpa facere reiciendis officia</p>
-            </div>
+                <img class="whyUs__icon" src="public/images/icons/icon-2.png" alt="icon">
+                <h3 class="whyUs__item-tilte">Logement Personnalisé</h3>
+                <p>Dalam ipsum, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi excepturi, veniam culpa facere reiciendis officia</p>
+            </div><!-- End item 2 -->
 
             <div class="whyUs__item">
                 <img class="whyUs__icon" src="public/images/icons/icon-3.png" alt="icon">
-                <h4 class="whyUs__item-tilte">Conseil et Financement</h4>
-                <p>Norou hahai, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi
-                    excepturi, veniam culpa facere reiciendis officia</p>
-            </div>
+                <h3 class="whyUs__item-tilte">Conseil et Financement</h3>
+                <p>Norou hahai, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi excepturi, veniam culpa facere reiciendis officia</p>
+            </div><!-- End item 3 -->
 
             <div class="whyUs__item">
                 <img class="whyUs__icon" src="public/images/icons/icon-4.png" alt="icon">
-                <h4 class="whyUs__item-tilte">Respect des Délais</h4>
-                <p>Garou kuand, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi
-                    excepturi, veniam culpa facere reiciendis officia</p>
-            </div>
+                <h3 class="whyUs__item-tilte">Respect des Délais</h3>
+                <p>Garou kuand, dolor sit amet consectetur adipisicing elit. Saepe impedit corporis minima commodi excepturi, veniam culpa facere reiciendis officia</p>
+            </div><!-- End item 4 -->
+
         </div>
-
-
     </section>
-    <!--End Why us -->
-
-
-
+    <!-- ======== End Why us ======== -->
 
     <!-- ======== Featured properties ======== -->
     <section class="properties">
         <div class="properties__center">
-            <div class="properties__header">
-                <h2><span class="properties__title">Propriétés</span> Vedettes</h2>
-                <div class="properties__underline"></div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur iste consequuntur illo quasi
-                    laborum quisquam omnis sunt voluptatum dolorem quam? Quis soluta inventore temporibus odio illum
-                    magnam veritatis sunt placeat.</p>
-            </div>
-            <div class="properties__content">
+            <h2><span>Propriétés</span> Vedettes</h2>
+            <div class="properties__underline"></div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur iste consequuntur illo quasi laborum quisquam omnis sunt voluptatum dolorem quam? Quis soluta inventore temporibus odio illum magnam veritatis sunt placeat.</p>
+
+            <div class="properties__items">
+                <div class="properties__item">
+                    <img class="properties__img" src="public/images/properties/property-9.jpg" alt="property">
+                    <div class="properties__infos">
+                        <h3 class="properties__infos-title">Villa Sansouci</h3>
+                        <p>Fontenay-le-Fleury &#47; Grand Paris</p>
+                        <span class="properties__price">572.000 &euro;</span>
+                    </div>
+                    <p class="properties__area-infos">1500 m&sup2; &bull; 5 Chambres &bull; 1 salon</p>
+                </div><!-- End item 1 -->
 
                 <div class="properties__item">
-                    <img class="properties__img" src="public/images/properties/property-1.jpg" alt="property">
-
+                    <img class="properties__img" src="public/images/properties/property-13.jpg" alt="property">
                     <div class="properties__infos">
-                        <h5 class="properties__infos-title">La Rose d'Evan</h5>
-                        <p>Eure &#47; Evreux
-                        <p>
-                            <span class="properties__price">225.000 &euro;</span>
+                        <h3 class="properties__infos-title">Sen Zepate</h3>
+                        <p>Piccadilly &#47; Londre</p>
+                        <span class="properties__price">428.000 &euro;</span>
                     </div>
-
-                    <p class="properties__area-infos">1500 m&sup2; &bull; 2 Chambres &bull; 1 salon</p>
-                </div>
+                    <p class="properties__area-infos">1500 m&sup2; &bull; 5 Chambres &bull; 1 salon</p>
+                </div><!-- End item 2 -->
 
                 <div class="properties__item">
-                    <img class="properties__img" src="public/images/properties/property-2.jpg" alt="property">
-
+                    <img class="properties__img" src="public/images/properties/property-28.jpg" alt="property">
                     <div class="properties__infos">
-                        <h5 class="properties__infos-title">Villa Choisy</h5>
-                        <p>Val-D'Oise &#47; Pontoise
-                        <p>
-                            <span class="properties__price">225.000 &euro;</span>
+                        <h3 class="properties__infos-title">Mon Désir</h3>
+                        <p>Kinkerbuurt &#47; Amsterdam</p>
+                        <span class="properties__price">546.000 &euro;</span>
                     </div>
-
-                    <p class="properties__area-infos">1500 m&sup2; &bull; 2 Chambres &bull; 1 salon</p>
-                </div>
+                    <p class="properties__area-infos">1500 m&sup2; &bull; 5 Chambres &bull; 1 salon</p>
+                </div><!-- End item 3 -->
 
                 <div class="properties__item">
-                    <img class="properties__img" src="public/images/properties/property-3.jpg" alt="property">
-
+                    <img class="properties__img" src="public/images/properties/property-31.jpg" alt="property">
                     <div class="properties__infos">
-                        <h5 class="properties__infos-title">Mer sea</h5>
-                        <p>Somme &#47; Amiens
-                        <p>
-                            <span class="properties__price">225.000 &euro;</span>
+                        <h3 class="properties__infos-title">Welcome</h3>
+                        <p>Buffalo &#47; New York</p>
+                        <span class="properties__price">358.000 &euro;</span>
                     </div>
-
-                    <p class="properties__area-infos">1500 m&sup2; &bull; 2 Chambres &bull; 1 salon</p>
-                </div>
+                    <p class="properties__area-infos">1500 m&sup2; &bull; 5 Chambres &bull; 1 salon</p>
+                </div><!-- End item 4 -->
 
                 <div class="properties__item">
-                    <img class="properties__img" src="public/images/properties/property-4.jpg" alt="property">
-
+                    <img class="properties__img" src="public/images/properties/property-39.jpg" alt="property">
                     <div class="properties__infos">
-                        <h5 class="properties__infos-title">L'Abri Cotier</h5>
-                        <p>Jura &#47; Lons-le-Saunier
-                        <p>
-                            <span class="properties__price">225.000 &euro;</span>
+                        <h3 class="properties__infos-title">Ma Retraite</h3>
+                        <p>Baie-Comeau &#47; Quebec</p>
+                        <span class="properties__price">745.000 &euro;</span>
                     </div>
-
-                    <p class="properties__area-infos">1500 m&sup2; &bull; 2 Chambres &bull; 1 salon</p>
-                </div>
+                    <p class="properties__area-infos">1500 m&sup2; &bull; 5 Chambres &bull; 1 salon</p>
+                </div><!-- End item 5 -->
 
                 <div class="properties__item">
-                    <img class="properties__img" src="public/images/properties/property-5.jpg" alt="property">
-
+                    <img class="properties__img" src="public/images/properties/property-33.jpg" alt="property">
                     <div class="properties__infos">
-                        <h5 class="properties__infos-title">Bicoque de Choc</h5>
-                        <p>Gironde &#47; Bordeaux
-                        <p>
-                            <span class="properties__price">225.000 &euro;</span>
+                        <h3 class="properties__infos-title">Le Petit Trianon</h3>
+                        <p class="properties__city">Johnstown &#47; New York</p>
+                        <span class="properties__price">652.000 &euro;</span>
                     </div>
+                    <p class="properties__area-infos">1500 m&sup2; &bull; 3 Chambres &bull; 1 salon</p>
+                </div><!-- End item 6 -->
+            </div><!-- End items -->
 
-                    <p class="properties__area-infos">1500 m&sup2; &bull; 2 Chambres &bull; 1 salon</p>
-                </div>
+            <a class="properties__btn" href="property.html">Toutes les prorietes</a>
 
-                <div class="properties__item">
-                    <img class="properties__img" src="public/images/properties/property-6.jpg" alt="property">
-
-                    <div class="properties__infos">
-                        <h5 class="properties__infos-title">La Rose d'Evan</h5>
-                        <p class="properties__city">Versailles &#47; Yvelines
-                        <p>
-                            <span class="properties__price">225.000 &euro;</span>
-                    </div>
-
-                    <p class="properties__area-infos">1500 m&sup2; &bull; 2 Chambres &bull; 1 salon</p>
-                </div>
-
-            </div>
-            <a class="properties__btn" href="#">Toutes les prorietes</a>
         </div>
-    </section><!-- End Featured properties -->
-
+    </section>
+    <!-- ======== End Featured properties ======== -->
 
     <!-- ======== Our agents ======== -->
     <section class="ourAgents">
-        <h2><span class="ourAgents__title">Nos</span> Agents</h2>
+        <h2><span>Nos</span> Agents</h2>
         <div class="ourAgents__underline"></div>
 
         <div class="ourAgents__swiper swiper mySwiper2">
             <div class="swiper-wrapper">
-
                 <div class="swiper-slide">
                     <div class="ourAgents__img-container">
-                        <img src="public/images/agents/agent-1.jpg" alt="">
+                        <img src="public/images/agents/agent-1.png" alt="agent-1">
                     </div>
                     <p class="ourAgents__name">Peter Jones</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis ea quo alias. Nulla
-                        reprehenderit
-                        dolore at exercitationem mollitia suscipit. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Similique
-                        perferendis eaque itaque blanditiis dolor consectetur</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis ea quo alias. Nulla reprehenderit dolore at exercitationem mollitia suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique perferendis eaque itaque blanditiis dolor consectetur</p>
                     <div class="ourAgents__tel">
                         <img class="ourAgents__icon-tel" src="public/images/icons/icon-tel.svg" alt="telephone">
                         <a class="ourAgents__number-tel" href="tel:+172273259">(+33) 172273259</a>
@@ -274,7 +245,7 @@
 
                 <div class="swiper-slide">
                     <div class="ourAgents__img-container">
-                        <img src="public/images/agents/agent-2.jpg" alt="">
+                        <img src="public/images/agents/agent-2.png" alt="agent-2">
                     </div>
                     <p class="ourAgents__name">Bill Anderson</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis ea quo alias. Nulla
@@ -294,7 +265,7 @@
 
                 <div class="swiper-slide">
                     <div class="ourAgents__img-container">
-                        <img src="public/images/agents/agent-3.jpg" alt="">
+                        <img src="public/images/agents/agent-3.png" alt="agent-3">
                     </div>
                     <p class="ourAgents__name">Susan Smith</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis ea quo alias. Nulla
@@ -314,9 +285,9 @@
 
                 <div class="swiper-slide">
                     <div class="ourAgents__img-container">
-                        <img src="public/images/agents/agent-4.jpg" alt="">
+                        <img src="public/images/agents/agent-4.png" alt="agent-4">
                     </div>
-                    <p class="ourAgents__name">Anna Johnson</p>
+                    <p class="ourAgents__name">Stan Johnson</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veritatis ea quo alias. Nulla
                         reprehenderit
                         dolore at exercitationem mollitia suscipit. Lorem ipsum dolor sit amet consectetur adipisicing
@@ -330,157 +301,152 @@
                         <img class="ourAgents__icon-mail" src="public/images/icons/icon-envelope.svg" alt="envelope">
                         <a class="ourAgents__mail" href="mailto:info@fontenay-immo.com">info@fontenay-immo.com</a>
                     </div>
-                </div>
-                <!--End slide 4 -->
+                </div><!--End slide 4 -->
+            </div><!-- End wrapper -->
 
-            </div>
             <div class="swiper-pagination"></div>
 
-        </div><!-- End swiper slide -->
-    </section><!-- End Our agents -->
-
+        </div><!-- End swiper slides -->
+    </section>
+    <!-- ======== End Our agents ======== -->
 
     <!-- ======== Call to action ======== -->
-    <section class="call-to-action">
-        <div class="call-to-action__content">
-            <p class="call-to-action__text">Lancez Vous en Achetant votre <span  class="call-to-action__bold">Nouvelle Maison</span></p>
-            <a class="call-to-action__btn" href="#">En savoir plus</a>
+    <section class="call-to-action"> 
+        <div class="call-to-action__center">
+            <p class="call-to-action__text">Lancez Vous en Achetant votre <span class="call-to-action__bold">Nouvelle
+                    Maison</span></p>
+            <a class="call-to-action__btn" href="about.html">a propos de nous</a>
         </div>
-    </section><!-- End Call to action -->
-
+    </section>
+    <!-- ======== End Call to action ======== -->
 
     <!-- ======== Testimonials ======== -->
     <section class="testimonials">
-            <div class="testimonials__header">
-                <h2>Témoignages</h2>
-                <div class="testimonials__underline"></div>
-            </div>
-            <div class="testimonials__content swiper mySwiper3">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide testimonials__slide  testimonials__slide-1">
-                        <div class="testimonials__overlay">
-                            <p class="testimonials__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae
-                                doloribus eveniet illum magnam
-                                sunt molestias, necessitatibus assumenda dolore corrupti, rem quam laboriosam ab, error enim
-                                cupiditate. Libero, perferendis adipisci!
-                                <span class="testimonials__name">Amanda Seyfried</span>  
-                            </p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide testimonials__slide  testimonials__slide-2">
-                        <div class="testimonials__overlay">
-                            <p class="testimonials__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-                                consequatur praesentium dolorum
-                                nihil iusto repellat officiis, consectetur animi laudantium vero ab eligendi assumenda,
-                                dolore
-                                minus
-                                cumque eos porro sequi. Dolorum.<span class="testimonials__name">Claude Barron</span></p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide testimonials__slide  testimonials__slide-3">
-                        <div class="testimonials__overlay">
-    
-                            <p class="testimonials__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
-                                delectus odio eum voluptatibus dolore
-                                ducimus praesentium reiciendis nemo. Ratione ipsa ipsam et voluptatum quaerat porro
-                                consectetur,
-                                neque optio eligendi possimus?<span class="testimonials__name">Sophie Annamé</span></p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide testimonials__slide  testimonials__slide-4">
-                        <div class="testimonials__overlay">
-    
-                            <p class="testimonials__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-                                illum voluptate magnam, nam neque
-                                consequuntur dolores delectus porro aperiam dolorum modi in, eum necessitatibus saepe eaque
-                                officiis
-                                eos doloribus voluptates.<span class="testimonials__name">Camélia Wassi</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials__button-next swiper-button-next"></div>
-                <div class="testimonials__button-prev swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
 
-            </div>
-    </section><!-- End Testimonials -->
+        <div class="testimonials__header">
+            <h2>Témoignages</h2>
+            <div class="testimonials__underline"></div>
+        </div>
 
+        <div class="testimonials__center swiper mySwiper3">            
+            <div class="swiper-wrapper">
 
+                <div class="swiper-slide testimonials__slide  testimonials__slide-1">
+                    <div class="testimonials__overlay">
+                        <p class="testimonials__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae doloribus eveniet illum magnam sunt molestias, necessitatibus assumenda dolore corrupti, rem quam laboriosam ab, error enim cupiditate. Libero, perferendis adipisci!
+                            <span class="testimonials__name">Amanda Seyfried</span>
+                        </p>
+                    </div>
+                </div><!-- End slide 1 -->
+
+                <div class="swiper-slide testimonials__slide  testimonials__slide-2">
+                    <div class="testimonials__overlay">
+                        <p class="testimonials__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore consequatur praesentium dolorum nihil iusto repellat officiis, consectetur animi laudantium vero ab eligendi assumenda, dolore minus cumque eos porro sequi. Dolorum.
+                            <span class="testimonials__name">Claude Barron</span>
+                        </p>
+                    </div>
+                </div><!-- End slide 2 -->
+
+                <div class="swiper-slide testimonials__slide  testimonials__slide-3">
+                    <div class="testimonials__overlay">
+                        <p class="testimonials__text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum delectus odio eum voluptatibus dolore ducimus praesentium reiciendis nemo. Ratione ipsa ipsam et voluptatum quaerat porro consectetur, neque optio eligendi possimus?
+                            <span class="testimonials__name">Sophie Annamé</span>
+                        </p>
+                    </div>
+                </div><!-- End slide 3 -->
+
+                <div class="swiper-slide testimonials__slide  testimonials__slide-4">
+                    <div class="testimonials__overlay">
+                        <p class="testimonials__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia illum voluptate magnam, nam neque consequuntur dolores delectus porro aperiam dolorum modi in, eum necessitatibus saepe eaque officiis eos doloribus voluptates.<span class="testimonials__name">Camélia Wassi</span></p>
+                    </div>
+                </div><!-- End slide 4  -->
+                
+            </div><!-- End wrapper -->
+
+            <div class="testimonials__button-next swiper-button-next"></div>
+            <div class="testimonials__button-prev swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+    <!-- ======== End Testimonials ======== -->
 
     <!-- ======== Our partners ======== -->
     <section class="partners">
-     
-        <h2><span class="partners__title">Nos</span> Partenaires</h2>
+        <h2><span>Nos</span> Partenaires</h2>
         <div class="partners__underline"></div>
 
-        <div class="partners__content">
+        <div class="partners__center">
             <div class="partners__content-logo">
-                <img src="public/images/our-partners/client-1.png" alt="">
+                <img src="public/images/our-partners/client-1.png" alt="logo client-1">
             </div>
-    
+
             <div class="partners__content-logo">
-                <img src="public/images/our-partners/client-2.png" alt="">
+                <img src="public/images/our-partners/client-2.png" alt="logo client-2">
             </div>
-    
+
             <div class="partners__content-logo">
-                <img src="public/images/our-partners/client-3.png" alt="">
+                <img src="public/images/our-partners/client-3.png" alt="logo client-3">
             </div>
-    
+
             <div class="partners__content-logo">
-                <img src="public/images/our-partners/client-4.png" alt="">
+                <img src="public/images/our-partners/client-4.png" alt="logo client-4">
             </div>
         </div>
-    
-    </section><!-- End Our patners -->
 
-
+    </section>
+    <!-- ======== End Our patners ========-->
 
     <!-- ======== Footer ======== -->
     <section class="footer">
         <div class="footer__center">
-            <div class="footer__block">
-                <img class="footer__logo" src="public/images/logo.svg" alt="logo">
+            <div class="footer__item">
+                <a href="index.html" class="footer__logo"><img src="public/images/logo.png" alt="logo"></a>
                 <ul class="footer__social-links">
-                    <li><a href="#" class="footer__social-link"><i class=" fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#" class="footer__social-link"><i class=" fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" class="footer__social-link"><i class=" fab fa-pinterest-p"></i></a></li>
-                    <li><a href="#" class="footer__social-link"><i class=" fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.pinterest.fr/" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-pinterest-p"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="footer__social-link"><i
+                                class=" fab fa-twitter"></i></a></li>
                 </ul>
-            </div>
-    
-            <div class="footer__block">
-                <h3>Navigation</h3>
+            </div><!-- End item 1 -->
+
+            <div class="footer__item">
+                <h3 class="footer__title">Navigation</h3>
                 <ul>
-                    <li><a class="footer__link" href="#">Accueil</a></li>
-                    <li><a class="footer__link" href="#">Nous Connaitre</a></li>
-                    <li><a class="footer__link" href="#">Propriétés</a></li>
-                    <li><a class="footer__link" href="#">contact</a></li>
+                    <li><a class="footer__link" href="index.html">Accueil</a></li>
+                    <li><a class="footer__link" href="about.html">Nous Connaitre</a></li>
+                    <li><a class="footer__link" href="property.html">Propriétés</a></li>
+                    <li><a class="footer__link" href="contacts.html">Contacts</a></li>
                 </ul>
-            </div>
-    
-            <div class="footer__block footer__space">
-                <h3>Pour les clients</h3>
+            </div><!-- End item 2 -->
+
+            <div class="footer__item">
+                <h3 class="footer__title">Pour les clients</h3>
                 <ul>
                     <li><a class="footer__link" href="#">Connexion</a></li>
                     <li><a class="footer__link" href="#">Forum</a></li>
                     <li><a class="footer__link" href="#">Promotions</a></li>
                     <li><a class="footer__link" href="#">Informations</a></li>
-    
+
                 </ul>
-            </div>
-    
-            <div class="footer__block footer__space">
-                <h3>Nous contacter</h3>
+            </div><!-- End item 3 -->
+
+            <div class="footer__item">
+                <h3 class="footer__title">Nous contacter</h3>
                 <address>
-                    9 rue césar Franck 78330 Fontenay Le Fleury<br><br>
-                    Téléphone: <a class="footer__address" href="tel:+13115552368"> (+33) 172273259</a><br>
-                    Fax: (+33) 172273259 <br><br>
-                    Mail: <a class="footer__address" href="mailto:jim@rock.com"> info@fontenay-immo.com</a>
+                    <p class="footer__address">9 rue césar Franck<br>78330 Fontenay Le Fleury</p>
+                    <p class="footer__address">Téléphone: <a class="footer__contact" href="tel:+13115552368"> (+33) 172273259</a><br>Fax: (+33)
+                        172273259</p>
+                    <p class="footer__address"> Mail: <a class="footer__contact" href="mailto:jim@rock.com"> info@fontenay-immo.com</a></p>
                 </address>
-    
-            </div>
+            </div><!-- End item 4 -->
         </div>
-    </section><!-- End Footer -->
+    </section>
+    <!-- ======== End Footer ======== -->
 
     <!-- Swiper JS file -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

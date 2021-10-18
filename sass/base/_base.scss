@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: $body-color;
+    line-height: $line-height-base;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
