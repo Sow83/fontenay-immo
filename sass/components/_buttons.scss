@@ -1,13 +1,39 @@
 
  /*------------------------------------*\
-  #Bouton 
+  #Boutons
 \*------------------------------------*/  
 
 .btn{
     @include btn; 
 }
-// La question que je me pose c'est pourquoi faire un mixin pour le 
-// bouton (btn) alors que le code peut etre ici sans etre dupliqué 
-// ailleurs 
 
-//  le petit bouton (btn--small) peut etre inclus dans le mixin (btn)
+// Boutons pause et play des carroussels
+.slideBtn{
+  &__rotation-controls{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);     
+      z-index: 2;
+      border: 0;
+      background-color: transparent;   
+      cursor: pointer;     
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+  }
+  &__rotation-control{
+    width: 48px;
+    height: 48px;
+  }
+  &__rotation-control-play{
+    display: none;
+  }
+  &__js-show-pause-btn .slideBtn__rotation-control-play{
+    display: block;
+  }
+  &__js-show-pause-btn .slideBtn__rotation-control-pause{
+    display: none;
+  }
+}

@@ -1,25 +1,22 @@
-/**
- * 1. C'est pour que la nav soit au dessus du caroussel(swiper) en tablet et mobile;
- */
-
 .nav {
     position: fixed;
     z-index: 100;
-    /* [1]*/
     left: -150%;
+    top: 0;
     height: 100%;
     width: 100%;
-    background-color: $nav-color;
     @include transition($timing-function: cubic-bezier(0,.77,.99,.23));
     @include box-shadow($nav-box-shadow-color);
+    background-color: $color-acadia;
     &__main {
         padding-left: 2rem;
-        margin-top: 2rem;
+        margin-top: 5rem;
     }
     &__main-link {
         display: block;
-        color: $nav-main-link-color;
+        color: $color-white;
         line-height: 3.5;
+        font-family: $font-family-titles;
     }
     &__social-links {
         display: flex;
@@ -37,6 +34,7 @@
         left: 0%;
     }
     @include breakpoints(large) {
+        background-color: initial;
         position: initial;
         display: flex;
         box-shadow: initial;
@@ -53,20 +51,23 @@
             font-size: 1.3rem;
             text-align: center;
             white-space: nowrap;
-            &:hover {
-                background-color: $nav-main-link-hover-bg-color;
+            @include transition;
+            &:hover,
+            &:focus {
+                color: $color-primary;
             }
         }
         &__active-main-link {
-            background-color: $nav-main-link-bg-color;
             color: $nav-main-link-active-color;
+            font-weight: 600;
         }
         &__social-links {
             width: initial;
             margin: initial;
             margin-left: 0.5rem;
         }
-        &__social-link:hover {
+        &__social-link:hover,
+        &__social-link:focus{
             transform: scale(1.2);
             background-color: $nav-social-link-hover-bg-color;
         }

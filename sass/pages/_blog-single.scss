@@ -34,7 +34,8 @@
         color: $blog-single-replay-color;
         margin-right: 0.625rem;
         font-size: 0.875rem;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $blog-single-replay-color-hover;
         }
     }

@@ -2,13 +2,35 @@
     &__title {
         margin-bottom: 0.625rem;
     }
+    &__label{
+        margin-bottom: 8px;
+        display: inline-block;
+    }
     &__field {
         width: 100%;
         outline: 0;
-        border: 0;
         @include border-default($form-field-border-color);
+        @include border-radius($value: 0.313rem);
         padding: 1rem;
         margin-bottom: 1.25rem;
+        resize: none;
+    }
+    &__field:focus{
+        @include border-default;
+        box-shadow: 0 0 0 3px lighten($color: $color-primary, $amount: 30);     
+    }
+    &__check-link{
+        color:  $color-primary;
+    }
+    &__error-message{
+        display: block;
+        color: red;
+        font-size: 13px;
+        padding-left: 5px;
+    }
+    &__response{
+        display: block;
+        padding: 5px;
     }
     &__btn {
         @include btn;

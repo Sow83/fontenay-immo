@@ -9,17 +9,19 @@
 
 @import "./layout/header";
 @import "./layout/navigation";
+@import "./layout/card-properties";
 @import "./layout/form";
-@import "./layout/footer";
 @import "./layout/sidebar";
-@import "./layout/body-container";
+@import "./layout/footer";
+
 
 @import "./pages/home";
-@import "./pages/about";
+@import "./pages/nous-connaitre";
 @import "./pages/blog";
 @import "./pages/contacts";
-@import "./pages/property";
+@import "./pages/proprietes";
 @import "./pages/blog-single";
+@import "./pages/error404";
 
 
 

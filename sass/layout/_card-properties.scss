@@ -1,0 +1,61 @@
+/** 
+ * 1. Le bouton est inline-block le text align de son parent permet de le centrer
+ */
+
+ .card-properties {
+    background-color: $properties-bg-color;
+    &__center {
+        @include layout-container;
+        text-align: center;
+        /* [1] */
+    }
+    &__underline {
+        @include underline;
+    }
+    &__items {
+        margin: 6.5rem 0;
+    }
+    &__item {
+        @include box-shadow;
+        background-color: $color-white;
+        margin-bottom: 1.25rem;
+        overflow: hidden;
+        @include border-radius;
+    }
+    &__img {
+        @include transition;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &__infos {
+        border-bottom: 1px solid $properties-infos-border-bottom-color;
+    }
+    &__price {
+        font-size: 1.313rem;
+        color: $properties-price-color;
+        display: block;
+        padding-bottom: 1rem;
+    }
+    &__area-infos {
+        padding: 0.938rem 0.125rem;
+    }
+    &__btn {
+        @include btn();
+    }
+    @include breakpoints(medium) {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item {
+            flex: 0 1 calc(100% / 2 - 0.625rem);
+        }
+    }
+    @include breakpoints(large) {
+        &__item {
+            flex: 0 1 calc(100% / 3 - 1.25rem);
+        }
+    }
+}

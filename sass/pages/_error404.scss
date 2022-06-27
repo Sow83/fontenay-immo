@@ -1,0 +1,9 @@
+.error404{
+    min-height: calc(100vh - 26.238rem);
+    text-align: center;
+    padding-top: 25vh;
+    &__btn{
+        @include btn;
+        margin: 1rem;  
+    }
+}

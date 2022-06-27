@@ -2,7 +2,7 @@
     @include layout-container;
     &__title {
         margin-bottom: 1.25rem;
-        font-weight: 600;
+        font-weight: 500;
     }
     &__address {
         font-weight: 500;
@@ -10,6 +10,10 @@
     }
     &__link {
         color: $contact-link;
+    }
+    &__error-message{
+        margin-top: -1.188rem;
+        margin-bottom: 1.25rem;
     }
     // Media queries
     @include breakpoints(medium) {
@@ -29,7 +33,7 @@
             display: flex;
             justify-content: space-between;
         }
-        &__form-field {
+        &__form-group {
             flex: 0 1 calc(50% - 1rem);
         }
     }
@@ -39,7 +43,6 @@
 /*------------------------------------*\
   #map
 \*------------------------------------*/
-
 .contact__map {
     margin: 2.313rem 0;
     &-responsive {

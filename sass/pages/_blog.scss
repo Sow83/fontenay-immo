@@ -1,5 +1,5 @@
 .blog {
-    // voir le partiel header(_header) pour le header
+    // le code css des entêtes des blogs se trouvent dans le partiel header
     @include layout-container;
     &__btn {
         @include btn;

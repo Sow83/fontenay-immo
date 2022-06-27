@@ -11,7 +11,8 @@
         color: $sidebar-link-color;
         margin-top: 0.625rem;
         display: block;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $sidebar-link-hover-color;
         }
     }
@@ -29,7 +30,8 @@
         margin-bottom: 0.313rem;
         display: block;
         font-weight: 600;
-        &:hover {
+        &:hover,
+        &:focus {
             color: $sidebar-post-link-hover-color;
         }
     }

@@ -1,0 +1,200 @@
+/*--------------------------------------------------------------*\
+  #Entry
+\*--------------------------------------------------------------*/
+.entry {
+    @include layout-container;
+    &__title {
+        margin-bottom: 2.313rem;
+    }
+    span {
+        font-weight: 200;
+    }
+    &__img {
+        margin-bottom: 1.25rem;
+    } 
+    @include breakpoints(large) {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__img {
+            flex: 0 1 calc(50% - 0.875rem);
+        }
+        &__text {
+            flex: 0 1 calc(50% - 0.875rem);
+        }
+    }
+}
+
+/*--------------------------------------------------------------*\
+  # About us
+\*--------------------------------------------------------------*/
+.aboutUs {
+    background-color: $color-white-smoke-light;
+    &__center {
+        @include layout-container;
+        text-align: center;
+    }
+    &__icon-container{
+        width: 90px;
+        height: 90px;
+        background-color: lightgray;
+        @include border-radius(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 3.125rem;
+    }
+    &__item-tilte {
+        margin-top: 2rem;
+        margin-bottom: 0.625rem;
+    }
+    @include breakpoints(medium) {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 3.125rem;
+        }
+        &__item {
+            flex: 0 1 calc(100% / 2 - 0.625rem);
+        }
+    }
+    @include breakpoints(large) {
+        &__item {
+            flex: 0 1 calc(100% / 4 - 1.25rem);
+        }
+        &__item:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------*\
+  #Team
+\*--------------------------------------------------------------*/
+.team {
+    &__title{
+        text-align: left;
+        margin-bottom: 2.313rem;
+    }
+    &__center{
+        @include layout-container;
+        text-align: center;
+    } 
+    span {
+        font-weight: 200;
+    }
+    &__underline{
+        @include underline;
+    }
+    &__content {
+        margin: auto;
+    }
+    &__item {
+        @include box-shadow;
+        @include border-default($team-item-border-color);
+        text-align: center;
+        margin-bottom: 1.25rem;
+        @include border-radius;
+    }
+    &__img{
+        border-top-left-radius: 0.313rem;
+        border-top-right-radius: 0.313rem;
+    }
+    &__infos {
+        padding-bottom: 0.625rem;
+    }
+    &__name {
+        color: $team-name-color;
+        font-weight: 500;
+    }
+    &__job {
+        margin-bottom: initial;
+        font-weight: 600;
+    }
+    @include breakpoints(medium) {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__item {
+            flex: 0 0 calc(100% / 2 - 0.625rem);
+        }
+    }
+    @include breakpoints(large) {
+        &__item {
+            flex: 0 1 calc(100% / 4 - 1.25rem);
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------*\
+  # subscribe / Call to action
+\*--------------------------------------------------------------*/
+.subscribe {
+    background-color: $subscribe-bg-color;
+    &__center {
+        @include layout-container($padding-top: 6rem, $padding-bottom: 10rem);
+        text-align: center;
+    }
+    &__text {
+        font-size: 1.875rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 200;
+    }
+    &__bold {
+        font-weight: 600;
+    }
+    &__input {
+        max-width: 21.75rem;
+        margin: 1.25rem auto;
+    }
+    &__error-message{
+        margin-top: -1.188rem;
+        margin-bottom: 1.25rem;
+    }
+    &__response{
+        max-width: 348px;
+        margin: auto;
+  
+    }
+   
+    @include breakpoints(large) {
+        &__center {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__text {
+            margin-bottom: initial;
+        }
+        &__form {
+            display: flex;
+            align-items: center;
+        }
+        &__input{
+            margin-right: 1.25rem;
+            width: 21.75rem;
+        }
+        &__error-message{
+            position: absolute;
+        }
+        &__response{
+            position: absolute;
+            margin-top: initial;
+        width: 348px;
+
+        }
+    }
+}

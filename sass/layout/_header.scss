@@ -1,36 +1,61 @@
-/**
- * 1. Dans le partiel typographiy tous les width des images sont à 100% donc
- *    responsives
- */
-
- 
 /*--------------------------------------------------------------*\
   #header pages
 \*--------------------------------------------------------------*/
 .header {
     @include box-shadow;
+    background: $color-nero;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    &__only-home{
+        background-color: rgba($color-acadia, 0.5);
+    }
+    &__skip-nav{
+        position: absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+        margin-left: 5px;
+        background-color: $color-primary;
+        color: $color-white;
+        &:focus{
+            position: static;
+            width:auto;
+            height:auto;
+            }
+    }
     &__center {
         @include layout-container($padding-top: 0, $padding-bottom: 0);
     }
     &__head {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        height: 72px;
     }
     &__logo {
         display: flex;
         align-items: center;
-        width: 12.5rem;
-        /* [1] */
+        width: 189px;
+        height: 47px;
+        position: relative;
+        z-index: 150;
     }
     &__button-toggle {
         display: flex;
         align-items: center;
         background: transparent;
-        font-size: 1.5rem;
         cursor: pointer;
         border: 0;
-        max-width: 36px;
-        max-height: 36px;
+        position: relative;
+        z-index: 150;
+    }
+    &__icon{
+        width: 30px;
+        height: 30px;
+        filter: invert(99%) sepia(71%) saturate(0%) hue-rotate(82deg) brightness(112%) contrast(100%);
     }
     &__hidden-nav {
         display: none;
@@ -41,6 +66,9 @@
     &__js-toggle-button .header__display-nav {
         display: none;
     }
+    &__js-body-no-scrool{
+        overflow: hidden; 
+    } 
     @include breakpoints(large) {
         &__center {
             display: flex;
@@ -73,20 +101,19 @@
     }
     &__auteurs {
         display: flex;
-        justify-content: start;
         flex-wrap: wrap;
         margin-bottom: 1.25rem;
     }
     &__auteur {
         font-size: 0.875rem;
-        color: $color-dark-gray;
+        color: $color-dim-gray;
         margin: 0 0.625rem;
     }
     &__name {
         padding-left: 0.313rem;
-        color: $color-dark-gray;
-    }
-   
+        color: $color-dim-gray;
+    } 
 }
+
 
 
