@@ -55,6 +55,7 @@
     &__item-tilte {
         margin-top: 2rem;
         margin-bottom: 0.625rem;
+        font-size: clamp(1.25rem,4vw,1.5rem);
     }
     @include breakpoints(medium) {
         &__items {
