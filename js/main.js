@@ -590,7 +590,7 @@ const items = document.querySelector(".card-properties__items");
 // Affiche  les biens de propriétés qui lui sont fournis en argument
 function displaypropertyitems (propertyitem) {
   let displayProperties = propertyitem.map(function (propertyitem) {
-    return `<div class="card-properties__item">
+    return `<article class="card-properties__item">
               <img class="card-properties__img" width="584" height="380"
                                            srcset="${propertyitem.img_srcset}"
                                            src="${propertyitem.img_src}"
@@ -605,7 +605,7 @@ function displaypropertyitems (propertyitem) {
                   <span class="card-properties__price">${propertyitem.price}</span>
               </div>
               <p class="card-properties__area-infos">${propertyitem.infos}</p>
-            </div>`
+            </article>`
   });
   displayProperties = displayProperties.join(" ");
   items.innerHTML = displayProperties;
