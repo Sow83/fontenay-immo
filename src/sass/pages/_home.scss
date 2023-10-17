@@ -1,0 +1,504 @@
+/*--------------------------------------------------------------*\
+  #Slides swiper - images hero
+\*--------------------------------------------------------------*/
+.slides {
+    width: 100%;
+    height: calc(100vh + 2.375rem);
+    &__btn-rotation-control-position{
+        bottom: 15vh;
+        z-index: 20;
+    }
+    &__slide {
+        text-align: center;
+        color: $slides-color;
+        background-position: center;
+        background-size: cover;
+    }
+    &__title{
+        font-size: clamp(2.5rem, 4vw, 3rem);
+        padding: 0 1rem;
+        font-family: $font-family-sans-serif;
+    }
+    &__slide-1 {
+        background-image: url("../../src/public/images/slides/slide-1-480x900.jpg");
+    }
+    &__slide-2 {
+        background-image: url("../../src/public/images/slides/slide-2-480x900.jpg");
+    }
+    &__slide-3 {
+        background-image: url("../../src/public/images/slides/slide-3-480x900.jpg");
+    }
+    &__slide-4 {
+        background-image: url("../../src/public/images/slides/slide-4-480x900.jpg");
+    }
+    &__overlay {
+        @include slideOverlay; 
+        background-image: radial-gradient(black 33%, transparent 33%);
+        background-size: 3px 3px;       
+    }
+    &__custom-pagination {
+        height: 23vh;
+    }
+   // Media queries
+    @include breakpoints-img-slide(small){
+        &__slide-1{
+            background-image: url('../../src/public/images/slides/slide-1-960x900.jpg');   
+        }
+        &__slide-2{
+            background-image: url('../../src/public/images/slides/slide-2-960x900.jpg');       
+        }
+        &__slide-3{
+            background-image: url('../../src/public/images/slides/slide-3-960x900.jpg');       
+
+        }
+        &__slide-4{
+            background-image: url('../../src/public/images/slides/slide-4-960x900.jpg');       
+        }            
+    }
+    
+    @include breakpoints-img-slide(medium){
+        &__slide-1{
+            background-image: url('../../src/public/images/slides/slide-1-1440x900.jpg');       
+        }
+        &__slide-2{
+            background-image: url('../../src/public/images/slides/slide-2-1440x900.jpg');       
+        }
+        &__slide-3{
+            background-image: url('../../src/public/images/slides/slide-3-1440x900.jpg');       
+        }
+        &__slide-4{
+            background-image: url('../../src/public/images/slides/slide-4-1440x900.jpg');       
+        }
+    }
+
+    @include breakpoints-img-slide(large){
+        &__slide-1{
+            background-image: url('../../src/public/images/slides/slide-1-1920x900.jpg');             
+        }
+        &__slide-2{
+            background-image: url('../../src/public/images/slides/slide-2-1920x900.jpg');             
+        }
+        &__slide-3{
+            background-image: url('../../src/public/images/slides/slide-3-1920x900.jpg');             
+        }
+        &__slide-4{
+            background-image: url('../../src/public/images/slides/slide-4-1920x900.jpg');             
+        }
+    }
+
+}
+.swiper-pagination.swiper-pagination-horizontal{
+    z-index: 1;
+}
+.slides__pagination .swiper-pagination-bullet {
+    @include border-default($swiper-pagination-bullet-border-color);
+    width: 0.9rem;
+    height: 0.9rem;
+    opacity: 1;
+    border: 2px solid white;
+    position: relative;
+    bottom: -10vh;
+   
+}
+
+.slides__pagination .swiper-pagination-bullet-active {
+    background-color: $swiper-pagination-bullet-active-bg-color;
+}
+
+
+/*--------------------------------------------------------------*\
+  #presentation
+\*--------------------------------------------------------------*/
+
+/**
+ * 1. C'est une correction de line height. Les line-height du titre et du texte sont différents
+ *    ce qui crée un décallage entre ces derniers. Le margin-top est venu résoudre ce décallage
+ */
+
+.presentation {
+    background-color: $color-white-smoke;
+    &__center{
+        @include layout-container($padding-top: 0);
+    }
+    &__items{
+        margin-bottom: 3.125rem;
+    }
+    &__item{
+        background-color: $color-white;
+        padding: 4%;
+        margin-bottom: 1.063rem;    
+        position: relative;  
+        top: -2.375rem;
+        z-index: 1;
+    }
+    &__img{
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.625rem;
+    }
+    &__title-h3{
+      margin-bottom: 0.625rem;
+      font-weight: 700;
+    }
+    &__little-title{
+        font-weight: 700;
+        margin-bottom: 0
+    }
+    &__little-title-underline{
+        @include underline;
+    }
+    &__text-title-h2{
+        font-size: clamp(2.5rem, 5vw, 4.813rem);
+        margin-bottom: 1.5rem;
+        font-weight: 900;
+        line-height: $line-height-big-tilte;
+    }
+    @include breakpoints(large) {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item {
+            flex: 0 1 calc(100% / 3 - 0.625rem);
+            max-width: 380px;
+            height: auto;
+            margin-bottom: 0;
+        }
+        &__little-title-container{
+            text-align: center;
+        }
+        &__text{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__text-item{
+            flex: 0 1 calc(100% / 2 - 0.625rem);
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*--------------------------------------------------------------*\
+  #About us
+\*--------------------------------------------------------------*/
+
+.whyUs {
+    background-color: $aboutUs-bg-color;
+    color: $aboutUs-color;
+    &__center {
+        @include layout-container;
+    }
+    &__title{
+        font-weight: 900;
+    }
+    &__text-header {
+        margin-top: 1.25rem;
+        margin-bottom: 5rem;
+    }
+    &__icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.625rem;
+        height: 5.625rem;
+        background-color: $color-white;
+        border-radius: 50%;
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 2.125rem;
+    }
+    &__item-title {
+        margin: 0.625rem 0;
+        font-weight: 600;
+    }
+    &__text {
+        color: $aboutUs-text-color;
+    }
+    @include breakpoints(medium) {
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item {
+            flex: 0 1 calc(100% / 2 - 0.625rem);
+        }
+    }
+    @include breakpoints(large) {
+        &__center {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__header {
+            margin-top: 3.75rem;
+            flex: 0 1 calc(38.707% - 1.25rem);
+            text-align: end;
+        }
+        &__content {
+            flex: 0 1 calc(59.853% - 1.25rem);
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------*\
+  #Our agents
+\*--------------------------------------------------------------*/
+.team-home {
+    background-color: $color-nero;
+    &__center{
+        @include layout-container;
+        text-align: center;
+    }
+    &__title{
+        color: $color-white;
+    } 
+    span {
+        font-weight: 200;
+    }
+    &__underline{
+        @include underline;
+    }
+    &__content {
+        margin: auto;
+    }
+    &__item {
+        text-align: center;
+        margin-bottom: 1.25rem;
+        @include border-radius;
+        background-color: $color-white;
+    }
+    &__img{
+        border-top-left-radius: 0.313rem;
+        border-top-right-radius: 0.313rem;
+    }
+    &__infos {
+        padding-bottom: 0.625rem;
+    }
+    &__name {
+        color: $team-name-color;
+        font-weight: 500;
+    }
+    &__job {
+        margin-bottom: initial;
+        font-weight: 600;
+    }
+    @include breakpoints(medium) {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__item {
+            flex: 0 0 calc(100% / 2 - 0.625rem);
+        }
+    }
+    @include breakpoints(large) {
+        &__item {
+            flex: 0 1 calc(100% / 4 - 1.25rem);
+        }
+    }
+}
+
+/*--------------------------------------------------------------*\
+  #Call to action
+\*--------------------------------------------------------------*/
+
+/**
+ * 1. Le bouton est inline-block le text align de son parent permet de le centrer
+ */
+
+.call-to-action {
+    background-color: $call-to-action-bg-color;
+    &__center {
+        @include layout-container($padding-top: 3.375rem, $padding-bottom: 3rem);
+        text-align: center;
+        /* [1] */
+    }
+    &__text {
+        font-size: 1.875rem;
+        margin-bottom: 0.938rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 200;
+    }
+    &__bold {
+        font-weight: 500;
+    }
+    &__btn {
+        @include btn;
+    }
+    @include breakpoints(large) {
+        &__center {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__text {
+            margin-bottom: initial;
+        }
+        &__btn {
+            margin: initial;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------*\
+  #Testimonials
+\*--------------------------------------------------------------*/
+.testimonials {
+    position: relative;
+    text-align: center;
+    color: $testimonials-color;
+    &__btn-rotation-control-position{
+        bottom: 40px;
+    }
+    &__header {
+        position: absolute;
+        z-index: 2;
+        top: -0.375rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__title{
+        padding-top: 1.5rem;
+    }
+    &__underline {
+        @include underline;
+    }
+    &__center {
+        width: 100%;
+        height: 500px;
+    }
+    &__slide {
+        font-family: $font-family-titles;
+        background-position: center;
+        background-size: cover;
+    }
+    &__slide-1 {
+        background-image: url("../../src/public/images/slides/testimonial-1-480x500.jpg");
+    }
+    &__slide-2 {
+        background-image: url("../../src/public/images/slides/testimonial-2-480x500.jpg");
+    }
+    &__slide-3 {
+        background-image: url("../../src/public/images/slides/testimonial-3-480x500.jpg");
+    }
+    &__slide-4 {
+        background-image: url("../../src/public/images/slides/testimonial-4-480x500.jpg");
+    }
+    &__overlay {
+        @include slideOverlay;
+    }
+    &__text {
+        max-width: 80vw;
+        font-size: clamp(0.875rem, 2vw, 1.125rem);
+        margin-top: 1.25rem;
+        font-weight: bold;
+        padding: 0 2.563rem;
+    }
+    &__name {
+        font-size: 2rem;
+        display: block;
+        margin-top: 1.25rem;
+    }
+    &__button-next.swiper-button-next,
+    &__button-prev.swiper-button-prev {
+        color: $color-white;
+    }
+    &__custom-pagination{
+        height: 12.5vh;
+    }
+    @include breakpoints-img-slide(small) {
+        &__slide-1 {
+            background-image: url("../../src/public/images/slides/testimonial-1-960x500.jpg");
+        }
+        &__slide-2 {
+            background-image: url("../../src/public/images/slides/testimonial-2-960x500.jpg");
+        }
+        &__slide-3 {
+            background-image: url("../../src/public/images/slides/testimonial-3-960x500.jpg");
+        }
+        &__slide-4 {
+            background-image: url("../../src/public/images/slides/testimonial-4-960x500.jpg");
+        }
+    }
+    @include breakpoints-img-slide(medium) {
+        &__header {
+            top: 0.938rem;
+        }
+        &__slide-1 {
+            background-image: url("../../src/public/images/slides/testimonial-1-1440x500.jpg");
+        }
+        &__slide-2 {
+            background-image: url("../../src/public/images/slides/testimonial-2-1440x500.jpg");
+        }
+        &__slide-3 {
+            background-image: url("../../src/public/images/slides/testimonial-3-1440x500.jpg");
+        }
+        &__slide-4 {
+            background-image: url("../../src/public/images/slides/testimonial-4-1440x500.jpg");
+        }
+    }
+    @include breakpoints-img-slide(large) {
+        &__text {
+            max-width: 43.75rem;
+        }
+        &__slide-1 {
+            background-image: url("../../src/public/images/slides/testimonial-1-1920x500.jpg");
+        }
+        &__slide-2 {
+            background-image: url("../../src/public/images/slides/testimonial-2-1920x500.jpg");
+        }
+        &__slide-3 {
+            background-image: url("../../src/public/images/slides/testimonial-3-1920x500.jpg");
+        }
+        &__slide-4 {
+            background-image: url("../../src/public/images/slides/testimonial-4-1920x500.jpg");
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------*\
+  #Our partners 
+\*--------------------------------------------------------------*/
+.partners {
+    background-color: $color-white-smoke;
+    &__center{
+        @include layout-container;
+        text-align: center;
+    } 
+    &__underline {
+        @include underline();
+    }
+    &__content-logo {
+        max-width: 10rem;
+        margin: auto;
+        margin-bottom: 1.875rem;
+        @include transition;
+        &:hover {
+            filter: contrast(200%);
+            opacity: 0.5;
+        }
+    }
+    @include breakpoints(medium) {
+        &__container-logo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__content-logo {
+            flex: 0 1 calc(25% - 1.25rem);
+            padding: 0;
+        }
+    }
+}
+
+

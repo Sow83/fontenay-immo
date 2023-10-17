@@ -1,0 +1,33 @@
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/card-properties";
+@import "./layout/form";
+@import "./layout/sidebar";
+@import "./layout/footer";
+
+
+@import "./pages/home";
+@import "./pages/nous-connaitre";
+@import "./pages/blog";
+@import "./pages/contacts";
+@import "./pages/proprietes";
+@import "./pages/blog-single";
+@import "./pages/error404";
+
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+
+
+
