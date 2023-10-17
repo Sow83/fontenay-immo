@@ -103,8 +103,8 @@ module.exports = {
       }), 
       new HtmlWebpackPlugin({
         filename: 'error404.html',
-        chunks: ['common','fontawesome'],
         template: './src/error404.html',
+        chunks: ['common','fontawesome'],
         inject: 'body', // Cette option spécifie que les balises <script> soit injecté dans le body
       }), 
          
