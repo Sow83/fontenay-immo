@@ -50,7 +50,7 @@ module.exports = merge (common, { //fusionne le fichier "webpack.common.js" avec
           }
         },
         {
-          loader: "sass-loader",  // Compile le Sass en CSS
+          loader: "sass-loader",  // Compile le fichier Sass (main.scss) en CSS
           options: {
             sourceMap: true,
           },

@@ -2,9 +2,9 @@ const  { merge }  = require('webpack-merge')
 const common = require('./webpack.common')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
-const CopyPlugin = require("copy-webpack-plugin");
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin")
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin")
 
 
 module.exports = merge (common, { //fusionne le fichier "webpack.common.js" avec cet objet de configuration
