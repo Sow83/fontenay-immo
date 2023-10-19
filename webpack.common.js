@@ -51,8 +51,9 @@ module.exports = {
       ],
   },
   plugins: [
-    new CleanWebpackPlugin(), 
-
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!**/.htaccess'],
+    }), 
     new HtmlWebpackPlugin({
       filename: 'index.html', // génère un fichier qui s'appelle "index.html"
       template: './src/index.html', 

@@ -6,7 +6,6 @@ const CopyPlugin = require("copy-webpack-plugin")
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const TerserPlugin = require("terser-webpack-plugin")
 
-
 module.exports = merge (common, { //fusionne le fichier "webpack.common.js" avec cet objet de configuration
   mode: 'production',
   module: {
@@ -49,7 +48,7 @@ module.exports = merge (common, { //fusionne le fichier "webpack.common.js" avec
       },
     ]
   },
-  plugins: [
+  plugins: [ 
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css", // va extraire le css qui est dans common.js(main.css) et dans index.js(vendorsSwiper) et met les balises link
     }),
