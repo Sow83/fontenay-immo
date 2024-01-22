@@ -6,5 +6,5 @@ Ce projet est maintenable et modulaire grâce à la mise en œuvre de structures
 et de fichiers conçues, telles que BEM, et à l'utilisation de SASS, un précompilateur CSS
 
 # Exécuter sass avec npm :  npm run sass
-
+# NB: Hors ligne pour le moment 
 # Démo: https://fontenay-immobilier.mouhamadousow.fr/
